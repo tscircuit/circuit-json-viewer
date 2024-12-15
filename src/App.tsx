@@ -6,10 +6,11 @@ function App() {
   const [error, setError] = useState<string | null>(null)
 
   const processFile = useCallback(
-    async (content: string) => {
+    async (content: string | object) => {
       setError(null)
       try {
-        const jsonContent = JSON.parse(content)
+        const jsonContent =
+          typeof content === "string" ? JSON.parse(content) : content
         setCircuitJson(jsonContent)
       } catch (err) {
         console.error("Processing error:", err)
@@ -85,7 +86,22 @@ function App() {
             </p>
           </div>
 
-          <div className="text-gray-400 text-sm mt-16">
+          <button
+            onClick={async () => {
+              try {
+                const response = await fetch("/example.json")
+                const exampleJson = await response.json()
+                processFile(exampleJson)
+              } catch (err) {
+                setError("Failed to load example file")
+              }
+            }}
+            className="mt-2 text-blue-400 hover:text-blue-300 underline"
+          >
+            or open an example
+          </button>
+
+          <div className="text-gray-400 text-sm mt-8">
             Circuit JSON Viewer created by{" "}
             <a
               className="underline hover:text-blue-400"
