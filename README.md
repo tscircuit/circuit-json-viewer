@@ -1,6 +1,6 @@
 # Circuit JSON Viewer
 
-A web-based viewer for Circuit JSON files, built with React and TypeScript. This tool allows you to visualize PCB (Printed Circuit Board), Schematic designs and 3d views by dragging and dropping Circuit JSON files directly into your browser.
+A web-based viewer for [Circuit JSON](https://github.com/tscircuit/circuit-json) files, built with React and TypeScript. This tool allows you to visualize PCB (Printed Circuit Board), Schematic designs and 3d views by dragging and dropping Circuit JSON files directly into your browser.
 
 ## Features
 
