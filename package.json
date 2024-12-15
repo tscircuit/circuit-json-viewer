@@ -13,10 +13,9 @@
     "playwright:update": "playwright test --update-snapshots"
   },
   "dependencies": {
-    "@tscircuit/pcb-viewer": "^1.10.17",
     "@tscircuit/runframe": "^0.0.12",
     "autoprefixer": "^10.4.20",
-    "dsn-converter": "^0.0.46",
+    "class-variance-authority": "^0.7.1",
     "nanoid": "^5.0.9",
     "postcss": "^8.4.49",
     "react": "^18.3.1",
