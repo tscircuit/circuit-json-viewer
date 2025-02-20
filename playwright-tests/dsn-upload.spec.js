@@ -6,7 +6,7 @@ test.describe('DSN Viewer Example Button Test', () => {
     await page.goto('/', { waitUntil: 'networkidle' });
     
     // Click the "Open Example" button
-    const openExampleButton = await page.getByRole('button', { name: /open example/i });
+    const openExampleButton = page.getByRole('button', { name: /or open an example/i });
     await openExampleButton.click();
     
     // Wait for any dynamic content to load
