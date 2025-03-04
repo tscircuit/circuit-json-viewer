@@ -13,7 +13,7 @@
     "playwright:update": "playwright test --update-snapshots"
   },
   "dependencies": {
-    "@tscircuit/runframe": "^0.0.220",
+    "@tscircuit/runframe": "^0.0.231",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "nanoid": "^5.0.9",
